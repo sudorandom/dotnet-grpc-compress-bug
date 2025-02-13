@@ -1,0 +1,13 @@
+version: v2
+clean: true
+inputs:
+  - module: buf.build/connectrpc/eliza
+plugins:
+- remote: buf.build/protocolbuffers/csharp:v29.3
+  out: gen
+  opt: 
+    - base_namespace=
+- remote: buf.build/grpc/csharp:v1.70.1
+  out: gen
+  opt:
+    - base_namespace=
